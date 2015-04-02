@@ -28,34 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mobileNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iRdbDataSet = new IR.IRdbDataSet();
+            this.familyTableAdapter = new IR.IRdbDataSetTableAdapters.FamilyTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbTotalPassengers = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.familyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iRdbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.doBDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.familyNameDataGridViewTextBoxColumn,
+            this.mobileNumberDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.familyBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 185);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // doBDataGridViewTextBoxColumn
+            // 
+            this.doBDataGridViewTextBoxColumn.DataPropertyName = "DoB";
+            this.doBDataGridViewTextBoxColumn.HeaderText = "DoB";
+            this.doBDataGridViewTextBoxColumn.Name = "doBDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // familyNameDataGridViewTextBoxColumn
+            // 
+            this.familyNameDataGridViewTextBoxColumn.DataPropertyName = "Family Name";
+            this.familyNameDataGridViewTextBoxColumn.HeaderText = "Family Name";
+            this.familyNameDataGridViewTextBoxColumn.Name = "familyNameDataGridViewTextBoxColumn";
+            // 
+            // mobileNumberDataGridViewTextBoxColumn
+            // 
+            this.mobileNumberDataGridViewTextBoxColumn.DataPropertyName = "Mobile number";
+            this.mobileNumberDataGridViewTextBoxColumn.HeaderText = "Mobile number";
+            this.mobileNumberDataGridViewTextBoxColumn.Name = "mobileNumberDataGridViewTextBoxColumn";
+            // 
+            // familyBindingSource
+            // 
+            this.familyBindingSource.DataMember = "Family";
+            this.familyBindingSource.DataSource = this.iRdbDataSet;
+            // 
+            // iRdbDataSet
+            // 
+            this.iRdbDataSet.DataSetName = "IRdbDataSet";
+            this.iRdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // familyTableAdapter
+            // 
+            this.familyTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(180, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Total passengers for this trip";
+            // 
+            // cbTotalPassengers
+            // 
+            this.cbTotalPassengers.FormattingEnabled = true;
+            this.cbTotalPassengers.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cbTotalPassengers.Location = new System.Drawing.Point(355, 25);
+            this.cbTotalPassengers.Name = "cbTotalPassengers";
+            this.cbTotalPassengers.Size = new System.Drawing.Size(65, 21);
+            this.cbTotalPassengers.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 304);
+            this.Controls.Add(this.cbTotalPassengers);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.familyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iRdbDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private IRdbDataSet iRdbDataSet;
+        private System.Windows.Forms.BindingSource familyBindingSource;
+        private IRdbDataSetTableAdapters.FamilyTableAdapter familyTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn familyNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mobileNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbTotalPassengers;
     }
 }
 
