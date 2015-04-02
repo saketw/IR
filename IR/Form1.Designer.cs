@@ -30,17 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mobileNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.familyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iRdbDataSet = new IR.IRdbDataSet();
             this.familyTableAdapter = new IR.IRdbDataSetTableAdapters.FamilyTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTotalPassengers = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.passengerName = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthPreference = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcardNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.familyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iRdbDataSet)).BeginInit();
@@ -48,56 +49,19 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.doBDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.familyNameDataGridViewTextBoxColumn,
-            this.mobileNumberDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.familyBindingSource;
+            this.Column1,
+            this.passengerName,
+            this.age,
+            this.Gender,
+            this.BirthPreference,
+            this.idcard,
+            this.idcardNumber});
             this.dataGridView1.Location = new System.Drawing.Point(12, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(646, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 185);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // doBDataGridViewTextBoxColumn
-            // 
-            this.doBDataGridViewTextBoxColumn.DataPropertyName = "DoB";
-            this.doBDataGridViewTextBoxColumn.HeaderText = "DoB";
-            this.doBDataGridViewTextBoxColumn.Name = "doBDataGridViewTextBoxColumn";
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
-            // familyNameDataGridViewTextBoxColumn
-            // 
-            this.familyNameDataGridViewTextBoxColumn.DataPropertyName = "Family Name";
-            this.familyNameDataGridViewTextBoxColumn.HeaderText = "Family Name";
-            this.familyNameDataGridViewTextBoxColumn.Name = "familyNameDataGridViewTextBoxColumn";
-            // 
-            // mobileNumberDataGridViewTextBoxColumn
-            // 
-            this.mobileNumberDataGridViewTextBoxColumn.DataPropertyName = "Mobile number";
-            this.mobileNumberDataGridViewTextBoxColumn.HeaderText = "Mobile number";
-            this.mobileNumberDataGridViewTextBoxColumn.Name = "mobileNumberDataGridViewTextBoxColumn";
             // 
             // familyBindingSource
             // 
@@ -130,16 +94,53 @@
             "2",
             "3",
             "4"});
-            this.cbTotalPassengers.Location = new System.Drawing.Point(355, 25);
+            this.cbTotalPassengers.Location = new System.Drawing.Point(341, 22);
             this.cbTotalPassengers.Name = "cbTotalPassengers";
             this.cbTotalPassengers.Size = new System.Drawing.Size(65, 21);
             this.cbTotalPassengers.TabIndex = 2;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Family Name";
+            this.Column1.Name = "Column1";
+            // 
+            // passengerName
+            // 
+            this.passengerName.HeaderText = "Name";
+            this.passengerName.Name = "passengerName";
+            this.passengerName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.passengerName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // age
+            // 
+            this.age.HeaderText = "Age";
+            this.age.Name = "age";
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            // 
+            // BirthPreference
+            // 
+            this.BirthPreference.HeaderText = "Bearth Preference";
+            this.BirthPreference.Name = "BirthPreference";
+            // 
+            // idcard
+            // 
+            this.idcard.HeaderText = "ID Card";
+            this.idcard.Name = "idcard";
+            // 
+            // idcardNumber
+            // 
+            this.idcardNumber.HeaderText = "ID Card Number";
+            this.idcardNumber.Name = "idcardNumber";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 304);
+            this.ClientSize = new System.Drawing.Size(769, 304);
             this.Controls.Add(this.cbTotalPassengers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -160,14 +161,15 @@
         private IRdbDataSet iRdbDataSet;
         private System.Windows.Forms.BindingSource familyBindingSource;
         private IRdbDataSetTableAdapters.FamilyTableAdapter familyTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn familyNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mobileNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbTotalPassengers;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn passengerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirthPreference;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcard;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcardNumber;
     }
 }
 
