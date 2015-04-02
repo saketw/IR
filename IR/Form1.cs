@@ -23,5 +23,12 @@ namespace IR
             this.familyTableAdapter.Fill(this.iRdbDataSet.Family);
 
         }
+
+        private void onSelChangeTotalPassengers(object sender, EventArgs e)
+        {
+            ComboBox cbTotalPassengers = new ComboBox();
+            string str = cbTotalPassengers.SelectedText;
+            MessageBox.Show(str);
+        }
     }
 }

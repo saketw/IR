@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.familyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iRdbDataSet = new IR.IRdbDataSet();
-            this.familyTableAdapter = new IR.IRdbDataSetTableAdapters.FamilyTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbTotalPassengers = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.passengerName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +37,11 @@
             this.BirthPreference = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcard = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcardNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iRdbDataSet = new IR.IRdbDataSet();
+            this.familyTableAdapter = new IR.IRdbDataSetTableAdapters.FamilyTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbTotalPassengers = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.familyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iRdbDataSet)).BeginInit();
@@ -62,42 +62,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(745, 185);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // familyBindingSource
-            // 
-            this.familyBindingSource.DataMember = "Family";
-            this.familyBindingSource.DataSource = this.iRdbDataSet;
-            // 
-            // iRdbDataSet
-            // 
-            this.iRdbDataSet.DataSetName = "IRdbDataSet";
-            this.iRdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // familyTableAdapter
-            // 
-            this.familyTableAdapter.ClearBeforeFill = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(180, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Total passengers for this trip";
-            // 
-            // cbTotalPassengers
-            // 
-            this.cbTotalPassengers.FormattingEnabled = true;
-            this.cbTotalPassengers.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cbTotalPassengers.Location = new System.Drawing.Point(341, 22);
-            this.cbTotalPassengers.Name = "cbTotalPassengers";
-            this.cbTotalPassengers.Size = new System.Drawing.Size(65, 21);
-            this.cbTotalPassengers.TabIndex = 2;
             // 
             // Column1
             // 
@@ -135,6 +99,43 @@
             // 
             this.idcardNumber.HeaderText = "ID Card Number";
             this.idcardNumber.Name = "idcardNumber";
+            // 
+            // familyBindingSource
+            // 
+            this.familyBindingSource.DataMember = "Family";
+            this.familyBindingSource.DataSource = this.iRdbDataSet;
+            // 
+            // iRdbDataSet
+            // 
+            this.iRdbDataSet.DataSetName = "IRdbDataSet";
+            this.iRdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // familyTableAdapter
+            // 
+            this.familyTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(180, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Total passengers for this trip";
+            // 
+            // cbTotalPassengers
+            // 
+            this.cbTotalPassengers.FormattingEnabled = true;
+            this.cbTotalPassengers.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cbTotalPassengers.Location = new System.Drawing.Point(341, 22);
+            this.cbTotalPassengers.Name = "cbTotalPassengers";
+            this.cbTotalPassengers.Size = new System.Drawing.Size(65, 21);
+            this.cbTotalPassengers.TabIndex = 2;
+            this.cbTotalPassengers.SelectedIndexChanged += new System.EventHandler(this.onSelChangeTotalPassengers);
             // 
             // Form1
             // 
