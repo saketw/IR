@@ -27,8 +27,27 @@ namespace IR
         private void onSelChangeTotalPassengers(object sender, EventArgs e)
         {
             ComboBox cbTotalPassengers = new ComboBox();
-            string str = cbTotalPassengers.SelectedText;
-            MessageBox.Show(str);
+            string str = this.cbTotalPassengers.GetItemText(this.cbTotalPassengers.SelectedItem);
+            
+           // MessageBox.Show(str.ToString());
+
+            //DataTable dt = new DataTable();
+            //DataRow dr;
+            //dt.Columns.Add("test1");
+            //dt.Columns.Add("test2");
+            //dr = dt.NewRow();
+            //dr["test1"] = "some value";
+            //dr["teste2"] = "some value";
+            //dt.Rows.Add(dr);
+
+            int x = int.Parse(str);
+            if(x==2)
+            {
+             //   dataGridView1.DataSource = dt;
+                MessageBox.Show(x.ToString());
+            }
         }
+
+       
     }
 }
