@@ -31,19 +31,20 @@ namespace IR
             
            // MessageBox.Show(str.ToString());
 
-            //DataTable dt = new DataTable();
+            DataTable dt = new DataTable();
             //DataRow dr;
-            //dt.Columns.Add("test1");
-            //dt.Columns.Add("test2");
+            dt.Columns.Add("Family");
+            dt.Columns.Add("Name");
+            DataRow dr = dt.NewRow();
             //dr = dt.NewRow();
-            //dr["test1"] = "some value";
-            //dr["teste2"] = "some value";
-            //dt.Rows.Add(dr);
+            dr["Family"] = "some value";
+            dr["Name"] = "some value";
+            dt.Rows.Add(dr);
 
             int x = int.Parse(str);
             if(x==2)
             {
-             //   dataGridView1.DataSource = dt;
+                dataGridView1.DataSource = dt;
                 MessageBox.Show(x.ToString());
             }
         }
